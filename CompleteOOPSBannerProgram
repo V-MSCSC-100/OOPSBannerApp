@@ -1,101 +1,18 @@
-/*abstract class Letter {
-
-    public abstract String[] getPattern();
-
-}
-
-class OLetter extends Letter {
-
-    public String[] getPattern() {
-
-        return new String[]{
-            " **** ",
-            "*    *",
-            "*    *",
-            "*    *",
-            " **** "
-        };
-
-    }
-
-}
-class PLetter extends Letter {
-
-    public String[] getPattern() {
-
-        return new String[]{
-           "****** ",
-           "*    *",
-           "*    *",
-           "******",
-           "*     ",
-           "*     ",
-           "*     ",
-        };
-
-    }
-
-}
-class SLetter extends Letter {
-
-    public String[] getPattern() {
-
-        return new String[]{
-            " *****",
-            "**    ",
-            " **** ",
-            "    **",
-            "***** "
-        };
-
-    }
-
-}
-public class BannerApp {
-
-    public static void main(String[] args) {
-
-        Letter[] letters = {
-
-            new OLetter(),
-            new OLetter(),
-            new PLetter(),
-            new SLetter()
-
-        };
-
-        printBanner(letters);
-
-    }
-
-
-    static void printBanner(Letter[] letters) {
-
-        for(int row = 0; row < 7; row++) {
-
-            for(Letter letter : letters) {
-
-                System.out.print(letter.getPattern()[row] + "  ");
-
-            }
-
-            System.out.println();
-
-        }
-
-    }
-
-}*/
-
 class Banner {
 
     void printOOPS() {
 
-        System.out.println(" *****   *****   ******   ***** ");
-        System.out.println("*     * *     *  *     * **     ");
-        System.out.println("*     * *     *  ******  *****      ");
-        System.out.println("*     * *     *  *            **");
-        System.out.println(" *****   *****   *        ***** ");
+      
+
+        System.out.println("  *****     *****    *******  ******* ");
+        System.out.println(" **   **   **    **  **    ** **      ");
+        System.out.println("**     ** **      ** **    ** **      ");
+        System.out.println("**     ** **      ** *******   *****  ");
+        System.out.println("**     ** **      ** **            ** ");
+        System.out.println(" **   **   **    **  **            ** ");
+        System.out.println("  *****     *****    **      *******  ");
+
+
 
     }
 
@@ -112,6 +29,3 @@ public class Main {
     }
 
 }
-
-
-
