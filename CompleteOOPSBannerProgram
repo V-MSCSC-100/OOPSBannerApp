@@ -1,90 +1,25 @@
-abstract class Letter {
+class Banner {
 
-    public abstract String[] getPattern();
+    void printOOPS() {
 
-}
-
-class OLetter extends Letter {
-
-    public String[] getPattern() {
-
-        return new String[]{
-            " **** ",
-            "*    *",
-            "*    *",
-            "*    *",
-            " **** "
-        };
+        System.out.println(" *****   *****   ******   ***** ");
+        System.out.println("*     * *     *  *     * **     ");
+        System.out.println("*     * *     *  ******  *****      ");
+        System.out.println("*     * *     *  *            **");
+        System.out.println(" *****   *****   *        ***** ");
 
     }
 
 }
-class PLetter extends Letter {
 
-    public String[] getPattern() {
-
-        return new String[]{
-           "****** ",
-           "*    *",
-           "*    *",
-           "******",
-           "*     ",
-           "*     ",
-           "*     ",
-        };
-
-    }
-
-}
-class SLetter extends Letter {
-
-    public String[] getPattern() {
-
-        return new String[]{
-            " *****",
-            "**    ",
-            " **** ",
-            "    **",
-            "***** "
-        };
-
-    }
-
-}
-public class BannerApp {
+public class Main {
 
     public static void main(String[] args) {
 
-        Letter[] letters = {
+        Banner b = new Banner();
 
-            new OLetter(),
-            new OLetter(),
-            new PLetter(),
-            new SLetter()
-
-        };
-
-        printBanner(letters);
-
-    }
-
-
-    static void printBanner(Letter[] letters) {
-
-        for(int row = 0; row < 7; row++) {
-
-            for(Letter letter : letters) {
-
-                System.out.print(letter.getPattern()[row] + "  ");
-
-            }
-
-            System.out.println();
-
-        }
+        b.printOOPS();
 
     }
 
 }
-
-
