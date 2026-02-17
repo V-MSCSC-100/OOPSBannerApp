@@ -1,0 +1,35 @@
+public class BannerApp {
+
+    public static void main(String[] args) {
+
+        Letter[] letters = {
+
+            new OLetter(),
+            new OLetter(),
+            new PLetter(),
+            new SLetter()
+
+        };
+
+        printBanner(letters);
+
+    }
+
+
+    static void printBanner(Letter[] letters) {
+
+        for(int row = 0; row < 7; row++) {
+
+            for(Letter letter : letters) {
+
+                System.out.print(letter.getPattern()[row] + "  ");
+
+            }
+
+            System.out.println();
+
+        }
+
+    }
+
+}
