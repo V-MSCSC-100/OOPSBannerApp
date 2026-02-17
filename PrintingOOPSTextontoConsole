@@ -1,0 +1,7 @@
+//Printing literal OOPS text.
+
+public class PrintOOPSText{
+public static void main(String args[]){
+	System.out.println("OOPS");
+	}
+}
