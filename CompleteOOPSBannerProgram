@@ -1,4 +1,4 @@
-abstract class Letter {
+/*abstract class Letter {
 
     public abstract String[] getPattern();
 
@@ -85,6 +85,33 @@ public class BannerApp {
 
     }
 
+}*/
+
+class Banner {
+
+    void printOOPS() {
+
+        System.out.println(" *****   *****   ******   ***** ");
+        System.out.println("*     * *     *  *     * **     ");
+        System.out.println("*     * *     *  ******  *****      ");
+        System.out.println("*     * *     *  *            **");
+        System.out.println(" *****   *****   *        ***** ");
+
+    }
+
 }
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Banner b = new Banner();
+
+        b.printOOPS();
+
+    }
+
+}
+
 
 
