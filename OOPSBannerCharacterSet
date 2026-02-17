@@ -1,0 +1,49 @@
+class OLetter extends Letter {
+
+    public String[] getPattern() {
+
+        return new String[]{
+            " #### ",
+            "#    #",
+            "#    #",
+            "#    #",
+            " #### "
+        };
+
+    }
+
+}
+class OLetter extends Letter {
+
+    public String[] getPattern() {
+
+        return new String[]{
+           "###### ",
+           "#    #",
+           "#    #",
+           "######",
+           "#     ",
+           "#     ",
+           "#     ",
+        };
+
+    }
+
+}
+class OLetter extends Letter {
+
+    public String[] getPattern() {
+
+        return new String[]{
+            " #####",
+            "##    ",
+            " #### ",
+            "    ##",
+            "##### "
+        };
+
+    }
+
+}
+
+
