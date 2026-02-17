@@ -1,0 +1,31 @@
+class Banner {
+
+    void printOOPS() {
+
+      
+
+        System.out.println(String.join(" ", "   *** ", "     *** ", "  ****** ", " *****"));
+        System.out.println(String.join(" ", " **   **", "  **   **", " **   **", "**    "));
+        System.out.println(String.join(" ", "**     **", "**     **", "**   **", "**    "));
+        System.out.println(String.join(" ", "**     **", "**     **", "****** ", "  *** "));
+        System.out.println(String.join(" ", "**     **", "**     **", "**    ", "     **"));
+        System.out.println(String.join(" ", " **   **", "  **   **", " **    ", "      **"));
+        System.out.println(String.join(" ", "   *** ", "     *** ", "  **    ", "***** "));
+
+        
+
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Banner b = new Banner();
+
+        b.printOOPS();
+
+    }
+
+}
