@@ -1,0 +1,61 @@
+class Banner {
+
+    void printOOPS() {
+
+        String[] O = {
+            "   *** ",
+            " **   **",
+            "**     **",
+            "**     **",
+            "**     **",
+            " **   **",
+            "   *** "
+        };
+
+        String[] O2 = {
+            "     *** ",
+            "  **   **",
+            "**     **",
+            "**     **",
+            "**     **",
+            "  **   **",
+            "     *** "
+        };
+
+        String[] P = {
+            "  ****** ",
+            " **   **",
+            "**   **",
+            "****** ",
+            "**    ",
+            " **    ",
+            "  **    "
+        };
+
+        String[] S = {
+            " *****",
+            "**    ",
+            "**    ",
+            "  *** ",
+            "     **",
+            "      **",
+            "***** "
+        };
+
+        for (int i = 0; i < 7; i++) {
+            System.out.println(O[i] + O2[i] + P[i] + S[i]);
+        }
+
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Banner b = new Banner();
+        b.printOOPS();
+
+    }
+
+}
