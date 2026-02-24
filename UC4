@@ -49,7 +49,7 @@ class Banner {
     }
 }
 
-public class Main {
+public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
