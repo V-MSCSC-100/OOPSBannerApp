@@ -1,0 +1,64 @@
+class Banner {
+
+    private String[] buildO() {
+        return new String[]{
+            String.join("", "   ***   "),
+            String.join("", " **   ** "),
+            String.join("", "**     **"),
+            String.join("", "**     **"),
+            String.join("", "**     **"),
+            String.join("", " **   ** "),
+            String.join("", "   ***   ")
+        };
+    }
+
+    private String[] buildP() {
+        return new String[]{
+            String.join("", " ******  "),
+            String.join("", " **   ** "),
+            String.join("", " **   ** "),
+            String.join("", " ******  "),
+            String.join("", " **       "),
+            String.join("", " **       "),
+            String.join("", " **       ")
+        };
+    }
+
+    private String[] buildS() {
+        return new String[]{
+            String.join("", "  *****  "),
+            String.join("", " **       "),
+            String.join("", " **       "),
+            String.join("", "  ***     "),
+            String.join("", "     **    "),
+            String.join("", "     **    "),
+            String.join("", " *****    ")
+        };
+    }
+
+    void printOOPS() {
+
+        String[] o1 = buildO();
+        String[] o2 = buildO();
+        String[] p = buildP();
+        String[] s = buildS();
+
+        String[] banner = new String[7];
+
+        for (int i = 0; i < 7; i++) {
+            banner[i] = String.join("", o1[i], o2[i], p[i], s[i]);
+        }
+
+        for (String line : banner) {
+            System.out.println(line);
+        }
+    }
+}
+
+public class OOPSBannerApp {
+
+    public static void main(String[] args) {
+        Banner b = new Banner();
+        b.printOOPS();
+    }
+}
