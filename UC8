@@ -1,0 +1,108 @@
+import java.util.HashMap;
+import java.util.Map;
+
+class Banner {
+
+    static class CharacterPatternMap {
+
+        private char character;
+        private String[] pattern;
+
+        public CharacterPatternMap(char character, String[] pattern) {
+            this.character = character;
+            this.pattern = pattern;
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public String[] getPattern() {
+            return pattern;
+        }
+    }
+
+    private Map<Character, CharacterPatternMap> patternMap = new HashMap<>();
+
+    public Banner() {
+        generatePatterns();
+    }
+
+    private void generatePatterns() {
+        patternMap.put('O', new CharacterPatternMap('O', buildO()));
+        patternMap.put('P', new CharacterPatternMap('P', buildP()));
+        patternMap.put('S', new CharacterPatternMap('S', buildS()));
+    }
+
+    private String[] getPattern(char c) {
+        CharacterPatternMap map = patternMap.get(c);
+        if (map != null) {
+            return map.getPattern();
+        }
+        return new String[7];
+    }
+
+    private String[] buildO() {
+        return new String[]{
+            "   ***   ",
+            " **   ** ",
+            "**     **",
+            "**     **",
+            "**     **",
+            " **   ** ",
+            "   ***   "
+        };
+    }
+
+    private String[] buildP() {
+        return new String[]{
+            " ******  ",
+            " **   ** ",
+            " **   ** ",
+            " ******  ",
+            " **      ",
+            " **      ",
+            " **      "
+        };
+    }
+
+    private String[] buildS() {
+        return new String[]{
+            "  *****  ",
+            " **      ",
+            " **      ",
+            "  ***    ",
+            "     **  ",
+            "     **  ",
+            " *****   "
+        };
+    }
+
+    void printMessage(String message) {
+
+        for (int i = 0; i < 7; i++) {
+
+            StringBuilder lineBuilder = new StringBuilder();
+
+            for (char c : message.toCharArray()) {
+
+                String[] pattern = getPattern(c);
+
+                if (pattern != null) {
+                    lineBuilder.append(pattern[i]);
+                }
+            }
+
+            System.out.println(lineBuilder.toString());
+        }
+    }
+}
+
+public class OOPSBannerApp {
+
+    public static void main(String[] args) {
+
+        Banner banner = new Banner();
+        banner.printMessage("OOPS");
+    }
+}
